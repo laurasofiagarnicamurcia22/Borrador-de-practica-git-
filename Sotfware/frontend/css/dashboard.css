@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== CUERPO PRINCIPAL ========== */
+body {
+    font-family: "Quicksand", "Poppins", sans-serif;
+    background: linear-gradient(135deg, #fff6f9, #fdeff2, #fff);
+    color: #5a4a4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* ========== TITULOS ========== */
+h1, h2 {
+    text-align: center;
+    font-weight: 600;
+    color: #c26d7e;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    text-shadow: 0 1px 3px rgba(194, 109, 126, 0.2);
+}
+
+/* ========== TARJETAS Y FORMULARIOS ========== */
+.card,
+#formRegister,
+#formLogin {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(194, 109, 126, 0.15);
+    padding: 40px 30px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    border: 1px solid rgba(255, 192, 203, 0.3);
+    transition: all 0.4s ease;
+}
+
+.card:hover,
+#formRegister:hover,
+#formLogin:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(194, 109, 126, 0.25);
+}
+
+/* ========== INPUTS ========== */
+.input,
+#formRegister input,
+#formLogin input {
+    width: 90%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1.5px solid #f2c4cc;
+    background-color: #fffafc;
+    color: #4a3f3f;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input::placeholder,
+#formRegister input::placeholder,
+#formLogin input::placeholder {
+    color: #b38b94;
+}
+
+.input:focus,
+#formRegister input:focus,
+#formLogin input:focus {
+    border-color: #e89aae;
+    box-shadow: 0 0 10px rgba(232, 154, 174, 0.3);
+    background-color: #ffffff;
+}
+
+/* ========== BOTONES ========== */
+.button,
+#formRegister button,
+#formLogin button {
+    width: 70%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f8a1b2, #e6869e);
+    box-shadow: 0 5px 15px rgba(232, 154, 174, 0.3);
+    transition: all 0.3s ease;
+}
+
+.button:hover,
+#formRegister button:hover,
+#formLogin button:hover {
+    background: linear-gradient(135deg, #e6869e, #f8a1b2);
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(232, 154, 174, 0.5);
+}
+
+/* ========== BOTONES DE LA PÁGINA DE INICIO ========== */
+body > button {
+    margin: 10px;
+    background: linear-gradient(135deg, #f3c1d1, #f0a6be);
+    border: none;
+    border-radius: 25px;
+    padding: 14px 25px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(240, 166, 190, 0.4);
+    transition: all 0.3s ease;
+}
+
+body > button:hover {
+    background: linear-gradient(135deg, #f0a6be, #f3c1d1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(240, 166, 190, 0.6);
+}
+
+/* ========== ANIMACIÓN DE ENTRADA ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card,
+#formRegister,
+#formLogin {
+    animation: fadeIn 0.8s ease both;
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 480px) {
+    .card,
+    #formRegister,
+    #formLogin {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+}
